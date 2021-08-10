@@ -41,7 +41,8 @@ class MailerPack implements MailerPackInterface
     private UserInterface $activeUser;
 
     /**
-     * MailerPackInterface Construct
+     * @param ServerWorkerInterface $serverWorker
+     * @param UserWorkerInterface   $userWorker
      */
     public function __construct(ServerWorkerInterface $serverWorker, UserWorkerInterface $userWorker)
     {
