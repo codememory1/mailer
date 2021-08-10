@@ -1,0 +1,29 @@
+{
+    "name": "codememory/mail",
+    "description": "mail",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danil",
+            "email": "kostynd1@gmail.com"
+        }
+    ],
+    "require": {
+        "codememory/config": "^1.1",
+        "codememory/fs": "^1.1",
+        "codememory/global-config": "^1.1",
+        "phpunit/phpunit": "^9.5",
+        "swiftmailer/swiftmailer": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codememory\\Components\\Mail\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}
