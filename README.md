@@ -90,6 +90,36 @@ $mailer->send();
 Создаем файл конфигурации **mail.yaml** в папке **configs**
 Данными именами, можно руководить с помощью глобальной конфигурации **.config/.codememory.json**   
 
+## Обзор конфигурации
+
+```yaml
+# configs/mail.yaml
+
+mail:
+  #! Servers and their settings
+  servers:
+    server1: 
+      host: smtp.gmail.com
+      port: 587
+      mimeTypeBody: text/html
+      encryption: tls
+  #! Users and their settings
+  users:
+    user1: 
+      username: "example@gmail.com"
+      password: "password"
+      server: "server1"
+      from:
+        - {
+            email: "example@gmail.com",
+            name: "Example"
+        }
+  #! The default user to use for authentication and sending messages to recipients
+  activeUser: user1
+
+
+```
+
 #### Пример использования MailerPack
 
 ```php
